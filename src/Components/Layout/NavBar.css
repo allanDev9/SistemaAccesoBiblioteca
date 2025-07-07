@@ -1,0 +1,16 @@
+.hover-bg-soft-yellow {
+  padding: 10px;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: inline-block;
+}
+
+.hover-bg-soft-yellow:hover {
+  background-color: rgba(255, 234, 0, 0.192);
+  cursor: pointer;
+}
+
+.bg-soft-yellow {
+  background-color: rgba(255, 234, 0, 0.192);
+  border-radius: 50px;
+}
