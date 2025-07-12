@@ -17,10 +17,12 @@ function App() {
           <Route path="/" element={<Inicio />} />
           <Route path="/inicio" element={<Inicio />} />
           <Route path="/estudiantes" element={<Estudiantes />} />
-          <Route path="/administrador" element={
+          <Route path="/administrador/*" element={
+
             <PrivateRoute>
               <Administrador />
             </PrivateRoute>
+
           } />
         </Route>
       </Routes>

@@ -1,5 +1,16 @@
+import { Route, Routes } from "react-router-dom"
+import { NavbarAdmin } from "../Layout/NavbarAdmin"
+import { Dashboard } from "./pages-admin/Dashboard"
+import { Usuarios } from "./pages-admin/Usuarios"
 export const Administrador = () => {
     return (
-        <h1 className="text-yellow-300 text-2xl text-center font-extrabold">Solo Personal Autorizado</h1>
+        <>
+            <Routes>
+                <Route path="/" element={<NavbarAdmin />}>
+                    <Route path="dashboard" element={<Dashboard />} />
+                    <Route path="users" element={<Usuarios />} />
+                </Route>
+            </Routes>
+        </>
     )
 }
