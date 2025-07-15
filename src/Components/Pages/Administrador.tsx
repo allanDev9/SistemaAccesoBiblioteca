@@ -7,6 +7,7 @@ export const Administrador = () => {
         <>
             <Routes>
                 <Route path="/" element={<NavbarAdmin />}>
+                    <Route path="/" element={<Dashboard />} />
                     <Route path="dashboard" element={<Dashboard />} />
                     <Route path="users" element={<Usuarios />} />
                 </Route>
