@@ -25,7 +25,7 @@ export const Login = () => {
     };
 
     const handleBack = () => {
-        navigate("/");
+        navigate("/TipoUsuario");
     };
 
     return (

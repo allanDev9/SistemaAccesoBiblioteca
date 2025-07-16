@@ -102,46 +102,7 @@ export const Visitante = () => {
 
                     {/* Carrera */}
                     <div className="flex flex-wrap align-items-center gap-2 mt-3">
-                        <FormControl fullWidth error={formSubmitted && !carrera}
-                            sx={{
-                                "& label": { color: "white" },
-                                "& .MuiOutlinedInput-root": {
-                                    color: "white",
-                                    "& fieldset": {
-                                        borderColor: "white",
-                                    },
-                                    "&:hover fieldset": {
-                                        borderColor: "white",
-                                    },
-                                    "&.Mui-focused fieldset": {
-                                        borderColor: "white",
-                                    },
-                                },
-                                "& .MuiSvgIcon-root": {
-                                    color: "white", // ícono desplegable
-                                }
-                            }}
-                        >
-                            <InputLabel id="carrera-label">Carrera</InputLabel>
-                            <Select
-                                labelId="carrera-label"
-                                id="carrera"
-                                value={carrera}
-                                label="Carrera"
-                                onChange={(e) => setCarrera(e.target.value)}
-                            >
-                                <MenuItem value=""><em>Seleccionar</em></MenuItem>
-                                <MenuItem value="Ingeniería">Ingeniería</MenuItem>
-                                <MenuItem value="Medicina">Medicina</MenuItem>
-                                <MenuItem value="Informatica Administrativa">Informatica Administrativa</MenuItem>
-                                <MenuItem value="Administración">Administración</MenuItem>
-                                <MenuItem value="Derecho">Derecho</MenuItem>
-                                {/* Agrega más si deseas */}
-                            </Select>
-                            {formSubmitted && !carrera && (
-                                <Message severity="error" text="La carrera es requerida" />
-                            )}
-                        </FormControl>
+
                     </div>
                     <div className='flex justify-center py-5'>
                         <Button label="Enviar" className="mt-5 w-50" onClick={handleSubmit}></Button>
