@@ -3,6 +3,8 @@ import { InputText } from "primereact/inputtext";
 import { Password } from "primereact/password";
 import { useLocation, useNavigate } from "react-router-dom";
 import fondo from "../../assets/UNAHVS6.jpg";
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import "./Login.css";
 
 export const Login = () => {
     const navigate = useNavigate();
@@ -22,8 +24,15 @@ export const Login = () => {
         }
     };
 
+    const handleBack = () => {
+        navigate("/");
+    };
+
     return (
         <div className="min-h-screen flex items-center justify-center " style={{ backgroundImage: `url(${fondo})`, backgroundSize: "cover" }}>
+            <div onClick={handleBack} className="absolute top-5 left-5 cursor-pointer text-white p-4 rounded-full shadow-md bg-icon text-center duration-300 ease-in-out">
+                <ArrowBackIosIcon />
+            </div>
             <div className="bg-gray-200 p-10 rounded-3xl shadow-2xl w-full max-w-md">
                 <h2 className="text-3xl font-bold text-center text-b-600 mb-8">
                     Iniciar Sesión

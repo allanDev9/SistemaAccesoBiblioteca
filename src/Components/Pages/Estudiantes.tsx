@@ -1,11 +1,20 @@
 import { Message } from 'primereact/message';
 import { InputText } from 'primereact/inputtext';
-import './styled/Card.css'
 import { Button } from 'primereact/button';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import { useNavigate } from 'react-router-dom';
 
 export const Estudiantes = () => {
+  const navigate = useNavigate();
+  const handleBack = () => {
+    navigate("/TipoUsuario");
+  }
+
   return (
-    <div className="card fondoCard">
+    <div className="card bg-black/50">
+      <span onClick={handleBack} className="absolute top-35 left-5 cursor-pointer text-white p-4 rounded-full shadow-md bg-icon text-center duration-300 ease-in-out">
+        <ArrowBackIosIcon />
+      </span>
       <div className='flex flex-col justify-center items-center p-5'>
         <h1 className="text-yellow-300 text-3xl text-center font-extrabold">Datos del Estudiante</h1>
         <div className='flex flex-col justify-start py-10'>
