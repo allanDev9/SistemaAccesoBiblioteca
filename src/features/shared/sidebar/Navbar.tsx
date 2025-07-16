@@ -1,13 +1,12 @@
-import { useLocation, useNavigate } from "react-router-dom";
-import { Contenedor } from "./Contenedor";
-import logoUnah from "../../assets/logoUnah.png";
-import fondo from "../../assets/fondo.jpg";
+import { useLocation } from "react-router-dom";
+import { Contenedor } from "../Layout/Contenedor";
+import logoUnah from "../../../assets/logoUnah.png";
+import fondo from "../../../assets/fondo.jpg";
 import { useEffect, useState } from "react";
-import { Desplegable } from "./Desplegable";
+import { Desplegable } from "../Layout/Desplegable";
 
 export const NavBar = () => {
   const location = useLocation();
-  const navigate = useNavigate();
   const [key, setKey] = useState(location.pathname);
 
   useEffect(() => {

@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom'
-import UNAHVS from '../../assets/UNAHVS6.jpg'
+import UNAHVS from '../../../assets/UNAHVS6.jpg'
 
 export const Contenedor = () => {
     return (

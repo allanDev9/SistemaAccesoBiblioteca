@@ -3,7 +3,11 @@ import { Sidebar } from 'primereact/sidebar';
 import { Button } from 'primereact/button';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import "./NavBar.css";
+import "../sidebar/Navbar.css";
+import HomeIcon from '@mui/icons-material/Home';
+import PersonIcon from '@mui/icons-material/Person';
+import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
+import ContactPhoneIcon from '@mui/icons-material/ContactPhone';
 
 export const Desplegable = () => {
     const location = useLocation();
@@ -23,15 +27,21 @@ export const Desplegable = () => {
                             className={`hover-bg-soft-yellow ${location.pathname === "/Inicio" ? "bg-soft-yellow text-gray-400" : ""
                                 }`}
                         >
+                            <span className="px-2">
+                                <HomeIcon />
+                            </span>
                             Inicio
                         </Link>
                     </li>
                     <li>
                         <Link
-                            to="/Estudiantes"
-                            className={`hover-bg-soft-yellow ${location.pathname === "/Estudiantes" ? "bg-soft-yellow text-gray-400" : ""
+                            to="/Estudiante"
+                            className={`hover-bg-soft-yellow ${location.pathname === "/Estudiante" ? "bg-soft-yellow text-gray-400" : ""
                                 }`}
                         >
+                            <span className="px-2">
+                                <PersonIcon />
+                            </span>
                             Estudiantes
                         </Link>
                     </li>
@@ -41,6 +51,9 @@ export const Desplegable = () => {
                             className={`hover-bg-soft-yellow ${location.pathname === "/Administrador" ? "bg-soft-yellow text-gray-400" : ""
                                 }`}
                         >
+                            <span className="px-2">
+                                <AdminPanelSettingsIcon />
+                            </span>
                             Administrador
                         </Link>
                     </li>
@@ -50,12 +63,15 @@ export const Desplegable = () => {
                             className={`hover-bg-soft-yellow ${location.pathname === "/contacto" ? "bg-soft-yellow text-gray-400" : ""
                                 }`}
                         >
+                            <span className="px-2">
+                                <ContactPhoneIcon />
+                            </span>
                             Contacto
                         </Link>
                     </li>
                 </ul>
             </Sidebar>
-            <Button onClick={() => setVisible(true)}>
+            <Button onClick={() => setVisible(true)} severity="secondary">
                 <MenuIcon />
             </Button>
         </div>
