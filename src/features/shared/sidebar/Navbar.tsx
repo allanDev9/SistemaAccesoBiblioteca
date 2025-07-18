@@ -3,7 +3,7 @@ import { Contenedor } from "../Layout/Contenedor";
 import logoUnah from "../../../assets/logoUnah.png";
 import fondo from "../../../assets/fondo.jpg";
 import { useEffect, useState } from "react";
-import { Desplegable } from "../Layout/Desplegable";
+import { Menú } from "../Layout/Menú";
 
 export const NavBar = () => {
   const location = useLocation();
@@ -26,7 +26,7 @@ export const NavBar = () => {
     >
       <nav className="flex justify-between items-center px-10 py-2">
         <div className="flex items-center space-x-4">
-          <Desplegable />
+          <Menú />
           <img className="w-20 object-cover" src={logoUnah} alt="" />
           <h1 className="text-3xl font-extrabold text-yellow-300">Sistema Acceso Biblioteca</h1>
         </div>

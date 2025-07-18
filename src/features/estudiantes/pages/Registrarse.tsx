@@ -9,14 +9,16 @@ import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 import Select from '@mui/material/Select';
 
-export const Visitante = () => {
+export const Registrarse = () => {
     const navigate = useNavigate();
     const [formSubmitted, setFormSubmitted] = useState(false);
     const [nombre, setNombre] = useState('');
     const [apellido, setApellido] = useState('');
     const [cuenta, setCuenta] = useState('');
+    const [contrasena, setContrasena] = useState('');
     const [correo, setCorreo] = useState('');
     const [carrera, setCarrera] = useState('');
+
     const handleBack = () => {
         navigate("/TipoUsuario");
     }
@@ -33,12 +35,12 @@ export const Visitante = () => {
     };
 
     return (
-        <div className="bg-black/50">
+        <div className=" bg-black/50">
             <span onClick={handleBack} className="absolute top-35 left-5 cursor-pointer text-white p-4 rounded-full shadow-md bg-icon text-center duration-300 ease-in-out">
                 <ArrowBackIosIcon />
             </span>
             <div className='flex flex-col justify-center items-center p-5'>
-                <h1 className="text-gray-300 text-3xl text-center font-extrabold">Datos del Visitante</h1>
+                <h1 className="text-gray-300 text-3xl text-center font-extrabold">Registrar Cuenta</h1>
                 <div className='flex flex-col justify-start py-10'>
                     {/* Nombre */}
                     <div className="flex flex-wrap align-items-center mb-3 gap-2">
@@ -96,6 +98,20 @@ export const Visitante = () => {
                             className={`mr-2 ${formSubmitted && !correo ? 'p-invalid' : ''}`}
                         />
                         {formSubmitted && !correo && (
+                            <Message severity="error" text="El correo es requerido" />
+                        )}
+                    </div>
+
+                    <div className="flex flex-wrap align-items-center gap-2 mb-3">
+                        <label htmlFor="correo" className="p-hidden-accessible">Contraseña</label>
+                        <InputText
+                            id="contrasena"
+                            placeholder="Contraseña"
+                            value={contrasena}
+                            onChange={(e) => setContrasena(e.target.value)}
+                            className={`mr-2 ${formSubmitted && !contrasena ? 'p-invalid' : ''}`}
+                        />
+                        {formSubmitted && !contrasena && (
                             <Message severity="error" text="El correo es requerido" />
                         )}
                     </div>

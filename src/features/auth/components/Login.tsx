@@ -4,7 +4,6 @@ import { Password } from "primereact/password";
 import { useLocation, useNavigate } from "react-router-dom";
 import fondo from "../../../assets/UNAHVS6.jpg";
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import "./Login.css";
 
 export const Login = () => {
     const navigate = useNavigate();
@@ -30,7 +29,7 @@ export const Login = () => {
 
     return (
         <div className="min-h-screen flex items-center justify-center" style={{ backgroundImage: `url(${fondo})`, backgroundSize: "cover" }}>
-            <div onClick={handleBack} className="absolute top-5 left-5 cursor-pointer text-white p-4 rounded-full shadow-md bg-icon text-center duration-300 ease-in-out">
+            <div onClick={handleBack} className="absolute top-5 left-5 cursor-pointer text-white p-4 rounded-full shadow-md hover:bg-white/15 text-center duration-300 ease-in-out">
                 <ArrowBackIosIcon />
             </div>
             <section className="h-full flex items-center justify-center">
